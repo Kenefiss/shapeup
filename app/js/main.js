@@ -4,6 +4,7 @@ $(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    fade: true,
     asNavFor: '.video-slider__small'
   });
   $('.video-slider__small').slick({
@@ -26,9 +27,29 @@ $(function () {
 
   $('.price__slider').slick({
     slidesToShow: 5,
+    centerPadding: '60px',
     centerMode: true,
     arrows: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
 

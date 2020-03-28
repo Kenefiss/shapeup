@@ -94,6 +94,7 @@
   display: flex;
   padding-top: 80px;
   padding-bottom: 160px;
+  min-width: 0;
 }
 
 .about__box {
@@ -164,13 +165,12 @@
 }
 
 .video-slider__big {
-  width: 564px;
+  max-width: 564px;
   margin-bottom: 20px;
-  opacity: .8;
+  opacity: .7;
 }
 
 .slider__big-item {
-  background: url(../images/slider-img-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -185,12 +185,16 @@
 }
 
 .video-slider__small {
-  max-width: 564px;
-  width: 100%;
-  height: 100px;
+  width: 564px;
 
   div+div {
-    padding-left: 27px;
+    margin-left: 20px;
+  }
+
+  .slick-slide.slick-current.slick-active {
+    img {
+      border: 1px solid $red;
+    }
   }
 }
 
@@ -242,6 +246,7 @@
     border: 2px solid $red;
     transform: scale(1.1);
     filter: grayscale(0%);
+    z-index: 5;
 
     .trainer__name {
       display: block;
@@ -302,7 +307,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
 }
 
 .reviews__title {
@@ -338,6 +342,10 @@
   div+div {
     margin-left: 32px;
   }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
 }
 
 .reviews__slider-item {
@@ -391,13 +399,15 @@
 }
 
 .price__slider {
-  max-width: 100%;
+  width: 100%;
   padding-top: 80px;
   margin-bottom: 160px;
 
-  img {
-    width: 100%;
-  }
+  // div {
+  //   width: 370px;
+  //   height: 370px;
+
+  // }
 
   div+div {
     margin-left: 30px;
@@ -405,8 +415,11 @@
 }
 
 .price__slider-item {
-  max-width: 370px;
+  width: 370px;
   height: 370px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .price__title {
@@ -418,6 +431,10 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 80px;
+
+  .price__card+.price__card {
+    margin-left: 10px;
+  }
 }
 
 .price__card {
@@ -499,6 +516,10 @@
   max-width: 262px;
   width: 100%;
   border: 2px solid #222;
+
+  img {
+    width: 100%;
+  }
 }
 
 .blog__card-class {
@@ -721,10 +742,11 @@
 .footer__menu {
   height: 80px;
   background: $grad;
+  padding: 0 20px;
 
   ul {
     justify-content: center;
-    padding-top: 32px;
+    padding: 32px 20px 0;
   }
 
   a {

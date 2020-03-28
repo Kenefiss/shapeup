@@ -1,0 +1,120 @@
+@media (max-width: 1112px) {
+  .blog__cards {
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+
+    .blog__card+.blog__card {
+      margin-left: 25px;
+    }
+
+    .blog__card {
+      margin-bottom: 30px;
+      max-width: 350px;
+
+      &:nth-child(3) {
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .footer__inner {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .footer__tags {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tags__list {
+    margin: 20px;
+    justify-content: center;
+
+    li {
+      &:nth-child(4) {
+        margin-left: 10px;
+      }
+
+      &:nth-child(7) {
+        margin-left: 10px;
+      }
+
+      &:nth-child(10) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog__card {
+    width: 262px;
+  }
+
+  .price__cards {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+
+    .price__card+.price__card {
+      margin-left: 0px;
+    }
+  }
+
+  .price__card {
+    margin: 0 10px 30px;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .blog__cards {
+    .blog__card+.blog__card {
+      margin-left: 0px;
+    }
+  }
+
+  .blog__card {
+    max-width: 350px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer__menu {
+
+    ul {
+      flex-wrap: wrap;
+      padding: 22px 0 0;
+
+      li {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .footer__contacts {
+    margin: 30px;
+  }
+
+  .social__list {
+    margin-bottom: 30px;
+  }
+
+  .price__card {
+    margin: 0 0px 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer__menu {
+    padding: 0;
+  }
+}
