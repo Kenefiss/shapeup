@@ -17,6 +17,23 @@
       }
     }
   }
+
+  .reviews__slider {
+    div+div {
+      margin-left: 0px;
+    }
+
+    .slick-list,
+    .slick-slider,
+    .slick-track {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .reviews__slider-item {
+    text-align: left;
+  }
 }
 
 @media (max-width: 920px) {
@@ -47,6 +64,11 @@
         margin-left: 10px;
       }
     }
+  }
+
+  .programs__cards {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 }
 
@@ -84,6 +106,19 @@
   .blog__card {
     max-width: 350px;
     width: 100%;
+  }
+
+  .reviews__slider-item {
+    max-width: 355px;
+    text-align: center;
+
+    .slider-item__text {
+      padding: 0 10px;
+    }
+
+    img {
+      display: none;
+    }
   }
 }
 

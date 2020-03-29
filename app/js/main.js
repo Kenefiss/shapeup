@@ -22,12 +22,20 @@ $(function () {
     slidesToScroll: 2,
     dots: true,
     arrows: false,
-    focusOnSelect: true
+    focusOnSelect: true,
+    infinite: true,
+    responsive: [{
+      breakpoint: 1112,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }, ]
   });
 
   $('.price__slider').slick({
     slidesToShow: 5,
-    centerPadding: '60px',
+    centerPadding: '30px',
     centerMode: true,
     arrows: false,
     focusOnSelect: true,

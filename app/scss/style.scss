@@ -317,7 +317,7 @@
 
 .reviews__slider {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 145px;
 
   .slick-dots {
@@ -333,20 +333,29 @@
     li+li {
       margin-left: 11px;
     }
+
+    .slick-active {
+      background: $blue;
+    }
   }
 
-  .slick-slide .slick-active {
-    background-color: $blue;
-  }
 
   div+div {
     margin-left: 32px;
+  }
+
+  .slick-list,
+  .slick-slider,
+  .slick-track {
+    display: flex;
+    justify-content: center;
   }
 }
 
 .slick-dotted.slick-slider {
   margin-bottom: 0px;
 }
+
 
 .reviews__slider-item {
   max-width: 555px;
@@ -402,12 +411,27 @@
   width: 100%;
   padding-top: 80px;
   margin-bottom: 160px;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
 
-  // div {
-  //   width: 370px;
-  //   height: 370px;
+  .slick-list,
+  .slick-slider,
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
 
-  // }
+    div+div {
+      margin-left: 30px;
+    }
+
+    .slick-slide,
+    .slick-active {
+      width: 370px;
+      // width: 100%;
+      height: 370px;
+    }
+  }
 
   div+div {
     margin-left: 30px;
@@ -416,6 +440,7 @@
 
 .price__slider-item {
   width: 370px;
+  // width: 100%;
   height: 370px;
   background-size: cover;
   background-position: center;
