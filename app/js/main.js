@@ -14,7 +14,9 @@ $(function () {
     dots: false,
     arrows: false,
     focusOnSelect: true,
-    // autoplay: true
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
   });
 
   $('.reviews__slider').slick({
@@ -24,6 +26,8 @@ $(function () {
     arrows: false,
     focusOnSelect: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [{
       breakpoint: 1112,
       settings: {
@@ -35,32 +39,26 @@ $(function () {
 
   $('.price__slider').slick({
     slidesToShow: 5,
-    centerPadding: '30px',
+    slidesToScroll: 1,
+    variableWidth: true,
     centerMode: true,
     arrows: false,
     focusOnSelect: true,
-    responsive: [{
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
+    autoplay: true,
+    autoplaySpeed: 3000,
   });
 
 
+  $('.header__menu-btn').on('click', function () {
+    $(this).toggleClass('active');
+    $('.menu__list').slideToggle(840);
+  });
+
+  $(window).resize(function () {
+    if ($(window).width() > 840) {
+      $('.menu__list').removeAttr('style');
+    }
+  });
 
 
 });

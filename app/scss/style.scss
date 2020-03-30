@@ -39,6 +39,60 @@
   }
 }
 
+.header__menu-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: none;
+}
+
+.burger {
+  background: $white;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: $white;
+    transition: .5s;
+  }
+
+  &:before {
+    top: -10px;
+    right: 0;
+  }
+
+  &:after {
+    top: 10px;
+    right: 0;
+  }
+}
+
+.header__menu-btn.active {
+  .burger {
+    background: transparent;
+
+    &:before {
+      top: 0;
+      transform: rotate(-315deg);
+    }
+
+    &:after {
+      top: 0;
+      transform: rotate(315deg);
+    }
+  }
+}
+
 .header__title {
   font-size: 60px;
   font-weight: 900;
@@ -187,13 +241,23 @@
 .video-slider__small {
   width: 564px;
 
-  div+div {
-    margin-left: 20px;
+  .slick-slide {
+    cursor: pointer;
+
+    div {
+      width: 170px;
+    }
   }
 
   .slick-slide.slick-current.slick-active {
     img {
       border: 1px solid $red;
+    }
+  }
+
+  .slick-list {
+    div+div {
+      margin-left: 27px;
     }
   }
 }
@@ -316,8 +380,6 @@
 }
 
 .reviews__slider {
-  display: flex;
-  justify-content: center;
   padding-bottom: 145px;
 
   .slick-dots {
@@ -339,7 +401,6 @@
     }
   }
 
-
   div+div {
     margin-left: 32px;
   }
@@ -355,7 +416,6 @@
 .slick-dotted.slick-slider {
   margin-bottom: 0px;
 }
-
 
 .reviews__slider-item {
   max-width: 555px;
@@ -408,29 +468,12 @@
 }
 
 .price__slider {
-  width: 100%;
   padding-top: 80px;
   margin-bottom: 160px;
-  overflow-x: hidden;
-  display: flex;
-  justify-content: space-between;
 
-  .slick-list,
-  .slick-slider,
-  .slick-track {
-    display: flex;
-    justify-content: space-between;
-
-    div+div {
-      margin-left: 30px;
-    }
-
-    .slick-slide,
-    .slick-active {
-      width: 370px;
-      // width: 100%;
-      height: 370px;
-    }
+  .slick-slide {
+    width: 370px;
+    height: 370px;
   }
 
   div+div {
@@ -440,7 +483,6 @@
 
 .price__slider-item {
   width: 370px;
-  // width: 100%;
   height: 370px;
   background-size: cover;
   background-position: center;
@@ -770,11 +812,22 @@
   padding: 0 20px;
 
   ul {
+    display: flex;
     justify-content: center;
     padding: 32px 20px 0;
   }
 
+
+  li+li {
+    margin-left: 30px;
+  }
+
   a {
+    text-decoration: none;
+    color: $white;
+    font-size: 16px;
+    transition: all .3s;
+
     &:hover {
       color: $black;
     }
