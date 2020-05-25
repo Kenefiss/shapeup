@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://Kenefiss.github.io/shapeup",
   "scripts": {
+    "deploy": "gh-pages -d app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Taras Shevchenko",
@@ -21,6 +23,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "owl.carousel": "^2.3.4"
   }
 }
