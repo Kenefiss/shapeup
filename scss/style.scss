@@ -1,0 +1,854 @@
+@import 'global';
+@import 'vars';
+
+
+//************** Header **************
+
+.header {
+  background-color: $black2;
+  background-image: url(../images/title-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 37px;
+  margin-bottom: 204px;
+}
+
+.menu__list {
+  display: flex;
+
+  li+li {
+    margin-left: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: 16px;
+    transition: all .3s;
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.header__menu-btn {
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: none;
+}
+
+.burger {
+  background: $white;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: $white;
+    transition: .5s;
+  }
+
+  &:before {
+    top: -10px;
+    right: 0;
+  }
+
+  &:after {
+    top: 10px;
+    right: 0;
+  }
+}
+
+.header__menu-btn.active {
+  .burger {
+    background: transparent;
+
+    &:before {
+      top: 0;
+      transform: rotate(-315deg);
+    }
+
+    &:after {
+      top: 0;
+      transform: rotate(315deg);
+    }
+  }
+}
+
+.header__title {
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  line-height: 40px;
+
+  span {
+    font-size: 48px;
+    color: $blue;
+  }
+
+  div+div {
+    margin-top: 32px;
+  }
+}
+
+.header__text {
+  max-width: 605px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $text;
+  margin-bottom: 25px;
+}
+
+.header__btn {
+  padding: 19px 60px;
+  margin-right: 20px;
+  margin-bottom: 205px;
+}
+
+.btn {
+  font-size: 16px;
+  color: $text;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #f80759;
+  border-radius: 5px;
+  transition: all .4s;
+
+  &:hover {
+    background: $grad;
+  }
+}
+
+//************** About **************
+
+.about {
+  background: $black;
+}
+
+.about__inner {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 160px;
+  min-width: 0;
+}
+
+.about__box {
+  max-width: 515px;
+  margin-right: 63px;
+}
+
+.title {
+  color: $blue;
+  font-size: 18px;
+  letter-spacing: 0.9px;
+  position: relative;
+
+  span {
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $white;
+    margin-top: 20px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: $red;
+    width: 60px;
+    height: 2px;
+    bottom: -29px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.about__box-title {
+  margin-top: 51px;
+  margin-bottom: 81px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: $red;
+    width: 60px;
+    height: 2px;
+    bottom: -29px;
+    transform: translate(0%, 0%);
+  }
+}
+
+.about__box-subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 33px;
+}
+
+.about__box-text {
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 33px;
+}
+
+.about__box-link {
+  color: $red;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.video-slider__big {
+  max-width: 564px;
+  margin-bottom: 20px;
+  opacity: .7;
+}
+
+.slider__big-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+
+  a {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.video-slider__small {
+  width: 564px;
+
+  .slick-slide {
+    cursor: pointer;
+
+    div {
+      width: 170px;
+    }
+  }
+
+  .slick-slide.slick-current.slick-active {
+    img {
+      border: 1px solid $red;
+    }
+  }
+
+  .slick-list {
+    div+div {
+      margin-left: 27px;
+    }
+  }
+}
+
+//************** Trainers **************
+
+.trainers {
+  background-color: $black;
+}
+
+.trainers__title {
+  text-align: center;
+  margin-bottom: 81px;
+}
+
+.trainers__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 97px;
+}
+
+.trainer__name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.9px;
+  text-align: center;
+  margin-top: 243px;
+  display: none;
+  background-color: $red;
+  opacity: .7;
+
+  span {
+    display: block;
+    color: $blue;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+  }
+}
+
+.trainers__item {
+  width: 212px;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  filter: grayscale(100%);
+  transition: all .7s;
+
+  &:hover {
+    border: 2px solid $red;
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    z-index: 5;
+
+    .trainer__name {
+      display: block;
+    }
+  }
+}
+
+//************** Trainers **************
+
+.programs {
+  background-color: $black2;
+}
+
+.programs__title {
+  padding-top: 81px;
+  margin-bottom: 89px;
+  text-align: center;
+}
+
+.programs__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.programs__card {
+  padding: 0 10px;
+  max-width: 320px;
+  text-align: center;
+
+  img {
+    margin-bottom: 46px;
+  }
+}
+
+.card__title {
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 1.1px;
+  margin-bottom: 30px;
+}
+
+.card__text {
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  margin-bottom: 33px;
+}
+
+.card__btn {
+  padding: 20px 37px;
+  margin-bottom: 81px;
+}
+
+//************** Reviews **************
+
+.reviews {
+  background: url(../images/reviews-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reviews__title {
+  text-align: center;
+  padding-top: 79px;
+  margin-bottom: 81px;
+}
+
+.reviews__slider {
+  padding-bottom: 145px;
+
+  .slick-dots {
+    margin-bottom: 95px;
+
+    li {
+      width: 14px;
+      height: 14px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    li+li {
+      margin-left: 11px;
+    }
+
+    .slick-active {
+      background: $blue;
+    }
+  }
+
+  div+div {
+    margin-left: 32px;
+  }
+
+  .slick-list,
+  .slick-slider,
+  .slick-track {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.reviews__slider-item {
+  max-width: 555px;
+  height: 300px;
+  background-color: $black2;
+
+  img {
+    float: left;
+    margin-right: 25px;
+    clip-path: ellipse(66% 77% at 34% 50%);
+  }
+}
+
+.slider-item__title {
+  color: $blue;
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: 36px;
+
+  span {
+    font-size: 10px;
+    color: $white;
+    display: block;
+    margin-top: 9px;
+    margin-bottom: 33px;
+  }
+}
+
+.slider-item__text {
+  margin-bottom: 22px;
+  font-size: 12px;
+  line-height: 24px;
+  padding-right: 25px;
+}
+
+.slider-item__star {
+  margin-bottom: 38px;
+  color: $red;
+  font-size: 14px;
+
+  i+i {
+    margin-left: 6px;
+  }
+}
+
+//************** Price **************
+
+.price {
+  background-color: $black;
+}
+
+.price__slider {
+  padding-top: 80px;
+  margin-bottom: 160px;
+
+  .slick-slide {
+    width: 370px;
+    height: 370px;
+  }
+
+  div+div {
+    margin-left: 30px;
+  }
+}
+
+.price__slider-item {
+  width: 370px;
+  height: 370px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.price__title {
+  text-align: center;
+  margin-bottom: 81px;
+}
+
+.price__cards {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
+
+  .price__card+.price__card {
+    margin-left: 10px;
+  }
+}
+
+.price__card {
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #222;
+  transition: all .5s;
+
+  &:hover {
+    border: 2px solid $blue;
+
+    .price__card-title {
+      background: $grad;
+    }
+  }
+}
+
+.price__card-price {
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  margin-top: 39px;
+  margin-bottom: 35px;
+
+  span {
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    font-size: 48px;
+  }
+}
+
+.price__card-title {
+  background-color: $black2;
+  font-size: 18px;
+  padding: 16px 0;
+  margin-bottom: 40px;
+  transition: all .5s;
+}
+
+.price__card-about {
+  font-size: 14px;
+  letter-spacing: 0.7px;
+
+  li+li {
+    margin-top: 17px;
+  }
+
+  span {
+    margin-top: 12px;
+    display: block;
+    margin-bottom: 39px;
+  }
+}
+
+.price__btn {
+  padding: 20px 40px;
+  margin-bottom: 45px;
+}
+
+//************** Blog **************
+
+.blog {
+  background-color: $black2;
+}
+
+.blog__title {
+  padding-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.blog__cards {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+
+.blog__card {
+  max-width: 262px;
+  width: 100%;
+  border: 2px solid #222;
+
+  img {
+    width: 100%;
+  }
+}
+
+.blog__card-class {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: $red;
+  font-size: 12px;
+  padding-left: 20px;
+}
+
+.blog__card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 23px;
+  padding: 0 20px;
+}
+
+.blog__card-text {
+  font-size: 14px;
+  padding: 0 16px;
+  line-height: 24px;
+  margin-bottom: 13px;
+}
+
+.blog__card-continue {
+  color: $red;
+  font-size: 14px;
+  margin-bottom: 28px;
+  padding-left: 20px;
+}
+
+.blog__card-stats {
+  color: $blue;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+
+//************** Contacts **************
+
+.contacts {
+  background: url(../images/bg-3.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.contacts__title {
+  padding-top: 80px;
+  margin-bottom: 74px;
+  text-align: center;
+
+  a {
+    color: $white;
+    font-size: 48px;
+    font-weight: 700;
+  }
+}
+
+.contacts__text {
+  max-width: 615px;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 74px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.contacts__btn {
+  padding: 18px 45px;
+  margin-bottom: 80px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+//************** Footer **************
+
+.footer {
+  background-color: $black;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 77px;
+}
+
+.footer__about {
+  width: 275px;
+}
+
+.footer__about-logo {
+  margin-bottom: 36px;
+}
+
+.footer__about-text {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 29px;
+}
+
+.footer__social-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.social__list {
+  display: flex;
+  margin-bottom: 68px;
+
+  li+li {
+    margin-left: 11px;
+  }
+
+  a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    color: $white;
+    border: 1px solid #444444;
+    transition: all .4s;
+
+    i {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+      border: 1px solid $red;
+      color: $blue;
+    }
+  }
+}
+
+.footer__contacts {
+  width: 220px;
+  position: relative;
+}
+
+.footer__contacts-title {
+  font-size: 24px;
+  margin-bottom: 49px;
+}
+
+.footer__contacts-list {
+  li {
+    padding-left: 30px;
+  }
+
+  a {
+    line-height: 24px;
+    font-size: 14px;
+    color: $white;
+
+    &:hover {
+      color: $blue;
+    }
+
+    i {
+      position: absolute;
+      left: 0;
+      color: $blue;
+    }
+  }
+
+  li+li {
+    margin-top: 25px;
+  }
+}
+
+.footer__tags {
+  width: 340px;
+}
+
+.footer__tags-title {
+  font-size: 24px;
+  margin-bottom: 27px;
+}
+
+.tags__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    &:nth-child(4) {
+      margin-left: 0;
+    }
+
+    &:nth-child(7) {
+      margin-left: 0;
+    }
+
+    &:nth-child(10) {
+      margin-left: 0;
+    }
+  }
+
+  li+li {
+    margin-left: 10px;
+  }
+
+  a {
+    padding: 14px 20px;
+    margin-bottom: 8px;
+    border: 1px solid #555555;
+    color: $white;
+
+    &:hover {
+      background: $grad;
+    }
+  }
+}
+
+.footer__menu {
+  height: 80px;
+  background: $grad;
+  padding: 0 20px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    padding: 32px 20px 0;
+  }
+
+
+  li+li {
+    margin-left: 30px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    font-size: 16px;
+    transition: all .3s;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.footer__copy {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+@import 'media';
