@@ -48,7 +48,6 @@ $(function () {
     autoplaySpeed: 3000,
   });
 
-
   $('.header__menu-btn').on('click', function () {
     $(this).toggleClass('active');
     $('.menu__list').slideToggle(840);
