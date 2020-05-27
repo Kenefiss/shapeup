@@ -97,8 +97,8 @@
   font-size: 60px;
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: 22px;
-  line-height: 70px;
+  margin-bottom: 18px;
+  line-height: 1.2em;
 
   span {
     font-size: 48px;
@@ -614,6 +614,7 @@
 
   &-img {
     overflow: hidden;
+    width: 100%;
   }
 
   img {
