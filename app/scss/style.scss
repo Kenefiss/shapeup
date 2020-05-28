@@ -157,19 +157,21 @@
 }
 
 .title {
-  color: $blue;
-  font-size: 18px;
-  letter-spacing: 0.9px;
-  position: relative;
+  p {
+    color: $blue;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    position: relative;
+    margin-bottom: 27px;
+  }
 
-  span {
-    display: block;
+  h3 {
     font-weight: 700;
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: $white;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5em;
   }
 
   &::after {
@@ -178,14 +180,14 @@
     background-color: $red;
     width: 60px;
     height: 2px;
-    bottom: -29px;
+    bottom: -22px;
     transform: translate(-50%, -50%);
   }
 }
 
 .about__box-title {
-  margin-top: 51px;
-  margin-bottom: 81px;
+  margin-top: 60px;
+  margin-bottom: 74px;
   position: relative;
 
   &::after {
@@ -194,7 +196,7 @@
     background-color: $red;
     width: 60px;
     height: 2px;
-    bottom: -29px;
+    bottom: -22px;
     transform: translate(0%, 0%);
   }
 }
@@ -270,7 +272,9 @@
 
 .trainers__title {
   text-align: center;
-  margin-bottom: 81px;
+  margin-bottom: 74px;
+  position: relative;
+  padding-top: 10px;
 }
 
 .trainers__items {
@@ -324,9 +328,10 @@
   background-color: $black2;
 
   &__title {
-    padding-top: 81px;
-    margin-bottom: 89px;
+    padding-top: 91px;
+    margin-bottom: 82px;
     text-align: center;
+    position: relative;
   }
 
   &__cards {
@@ -341,7 +346,7 @@
     border-radius: 50%;
     border: 2px solid $red;
     position: relative;
-    margin-bottom: 48px;
+    margin-bottom: 51px;
 
     svg {
       width: 50%;
@@ -396,9 +401,10 @@
 }
 
 .reviews__title {
+  position: relative;
   text-align: center;
-  padding-top: 79px;
-  margin-bottom: 81px;
+  padding-top: 88px;
+  margin-bottom: 74px;
 }
 
 .reviews__slider {
@@ -423,7 +429,7 @@
     }
   }
 
-  .reviews__slider+.reviews__slider {
+  .slick-slide+.slick-slide {
     margin-left: 32px;
   }
 
@@ -508,7 +514,9 @@
 
 .price__title {
   text-align: center;
-  margin-bottom: 81px;
+  position: relative;
+  padding-top: 9px;
+  margin-bottom: 75px;
 }
 
 .price__cards {
@@ -585,9 +593,10 @@
 }
 
 .blog__title {
-  padding-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 90px;
+  margin-bottom: 73px;
   text-align: center;
+  position: relative;
 }
 
 .blog__cards {
@@ -656,8 +665,6 @@
   }
 }
 
-
-
 //************** Contacts **************
 
 .contacts {
@@ -666,14 +673,21 @@
 }
 
 .contacts__title {
-  padding-top: 80px;
-  margin-bottom: 74px;
+  padding-top: 90px;
+  margin-bottom: 80px;
   text-align: center;
+  position: relative;
 
   a {
+    display: block;
     color: $white;
+    padding-top: 9px;
     font-size: 48px;
     font-weight: 700;
+  }
+
+  &::after {
+    bottom: -33px;
   }
 }
 

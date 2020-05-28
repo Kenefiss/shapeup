@@ -62,7 +62,7 @@ $(function () {
   $(".rate-star").rateYo({
     rating: 5,
     ratedFill: "#f80759",
-    spacing: "8px",
+    spacing: "7px",
     starWidth: "17px",
     halfStar: true,
     readOnly: true
