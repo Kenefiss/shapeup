@@ -423,7 +423,7 @@
     }
   }
 
-  div+div {
+  .reviews__slider+.reviews__slider {
     margin-left: 32px;
   }
 
@@ -475,12 +475,7 @@
 
 .slider-item__star {
   margin-bottom: 38px;
-  color: $red;
-  font-size: 14px;
-
-  i+i {
-    margin-left: 6px;
-  }
+  display: inline-block;
 }
 
 //************** Price **************
@@ -608,7 +603,7 @@
 
   &:hover {
     img {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 
