@@ -366,6 +366,7 @@
 
     &:hover {
       svg {
+        fill: $white;
         width: 65%;
       }
     }
@@ -657,11 +658,16 @@
   }
 
   &-stats {
+    fill: $blue;
     color: $blue;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+
+    svg {
+      width: 12px;
+    }
   }
 }
 
@@ -753,21 +759,25 @@
   a {
     width: 40px;
     height: 40px;
-    font-size: 16px;
-    color: $white;
     border: 1px solid #444444;
-    transition: all .4s;
+    transition: all .5s;
 
-    i {
+    svg {
       position: relative;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: 50%;
+      fill: $white;
+      transition: all .5s;
     }
 
     &:hover {
       border: 1px solid $red;
-      color: $blue;
+
+      svg {
+        fill: $blue;
+      }
     }
   }
 }
@@ -796,12 +806,13 @@
       color: $blue;
     }
 
-    i {
+    svg {
       position: absolute;
       top: 50%;
       left: 0;
       transform: translate(-50%, -50%);
-      color: $blue;
+      fill: $blue;
+      width: 18px;
     }
   }
 
